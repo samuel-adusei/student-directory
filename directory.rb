@@ -1,6 +1,3 @@
-student_count = 11
-#creates a variable equal 11
-
 students = [
  "Dr . Hannibal Lecter",
  "Nurse Ratched",
@@ -13,23 +10,21 @@ students = [
  "Joffrey Baratheon",
  "Norman Bates"
  ]
- puts "The students of Villians Academy"
  
+ def print_header
+ puts "The students of Villians Academy" 
  puts "-----------"
- puts students[0]
- puts students[1]
- puts students[2]
- puts students[3]
- puts students[4]
- puts students[5]
- puts students[6]
- puts students[7]
- puts students[8]
- puts students[9]
- puts students[10]
-print "Overall we have #{student_count}The best students"
-
-students.each do |student|
- puts student
 end
 
+def print(names)
+ names.each do |name|
+  puts name
+ end
+ 
+ def print_footer(names)
+ puts "Overall we have #{names.count}The best students"
+end
+
+print_header
+print(students)
+print_footer(students)
